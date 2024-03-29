@@ -1,0 +1,24 @@
+# Dependencias instaladas por npm
+node_modules/
+
+# Módulos de dependencias binarias
+bin/
+
+# Archivos de caché generados por npm
+npm-debug.log
+yarn-debug.log
+yarn-error.log
+
+# Carpeta temporal
+tmp/
+
+# Archivos de build o compilados
+build/
+dist/
+
+# Archivos de entorno local
+.env
+
+# Cualquier otro archivo específico para tu proyecto que no necesites rastrear
+# archivo.txt
+# carpeta_secreta/
