@@ -12,5 +12,6 @@ dynamodb.listTables({}, (err, data)=>{
         console.log(err);
     } else {
         console.log(data);
+        console.log('prueba')
     }
 });
