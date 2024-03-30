@@ -1,10 +1,5 @@
 
-//referencing sdk in js file
-const AWS = require("aws-sdk");
-//specifying aws region where dynamodb table will be created
-AWS.config.update({ region: 'us-east-1' });
-// import aws from './aws/config'
-//instantiate dynamodb class
+const aws = require('./aws/config.js');
 const dynamodb = new aws.DynamoDB();
 //listing tables
 dynamodb.listTables({}, (err, data)=>{
@@ -15,3 +10,17 @@ dynamodb.listTables({}, (err, data)=>{
         console.log('prueba')
     }
 });
+
+
+const params = {
+    TableName: 'Usuarios'
+};
+
+dynamodb.scan(params, (err, data) => {
+    if (err) {
+        console.error("Error al escanear la tabla:", err);
+    } else {
+        console.log("Datos de la tabla:", data.Items);
+    }
+});
+
